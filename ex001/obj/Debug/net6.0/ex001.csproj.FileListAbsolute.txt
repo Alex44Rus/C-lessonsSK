@@ -1,0 +1,15 @@
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\bin\Debug\net6.0\ex001.exe
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\bin\Debug\net6.0\ex001.deps.json
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\bin\Debug\net6.0\ex001.runtimeconfig.json
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\bin\Debug\net6.0\ex001.dll
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\bin\Debug\net6.0\ex001.pdb
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\ex001.csproj.AssemblyReference.cache
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\ex001.GeneratedMSBuildEditorConfig.editorconfig
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\ex001.AssemblyInfoInputs.cache
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\ex001.AssemblyInfo.cs
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\ex001.csproj.CoreCompileInputs.cache
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\ex001.dll
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\refint\ex001.dll
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\ex001.pdb
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\ex001.genruntimeconfig.cache
+C:\GeekBrains\Языки программирования\C#\Практика\Examples\ex001\obj\Debug\net6.0\ref\ex001.dll
