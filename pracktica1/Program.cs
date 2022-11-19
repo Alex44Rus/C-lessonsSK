@@ -1,4 +1,5 @@
-﻿/*
+﻿//  Задача № Является ли число 2 квадратом числа 1
+/*
 int num1 = -3;
 int num2 = 9;
 if (num2 == num1*num1)
@@ -10,8 +11,8 @@ else
     Console.WriteLine("-> НЕТ");
 }
 */
-
-
+// Задача № "Вывод названия дня недели по вводу номера дня недели"
+/*
 int daynumber;
 Console.WriteLine("Введите порядковый номер дня недели");
 daynumber = Convert.ToInt32 (Console.ReadLine());
@@ -45,3 +46,32 @@ daynumber = Convert.ToInt32 (Console.ReadLine());
             Console.WriteLine("Воскресенье");
         }  
 else Console.WriteLine("Ни фига");
+*/
+
+
+
+//  Задача № 5 "Квадрат числа"
+/*
+Console.WriteLine("Введите число ");
+int number = Convert.ToInt32(Console.ReadLine());
+PrintPower(number);
+
+void PrintPower(int number)
+{
+    Console.WriteLine($"{number} * {number} = {number * number}");
+}
+*/
+
+// Напишите программу, которая на вход принимает одно число (N), а на выходе показывает все целые числа в промежутке от -N до N.
+// Задача № 7 От - N до N
+
+Console.WriteLine("Введите число  ");
+int num = Convert.ToInt32(Console.ReadLine());
+num = Math.Abs(num);
+int i=-num;
+while (i <= num)
+    {
+        Console.Write(" "+i);
+        i++;
+       
+    }
