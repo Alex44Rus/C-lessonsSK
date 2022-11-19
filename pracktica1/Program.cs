@@ -1,10 +1,7 @@
-﻿int num1;
-int num2;
-Console.WriteLine("Введите первое число");
-num1 = Convert.ToInt32(Console.ReadLine (num1));
-Console.WriteLine("Введите второе число");
-num2 = Convert.ToInt32(Console.ReadLine(num2));
-if (num2 = num1*num1)
+﻿/*
+int num1 = -3;
+int num2 = 9;
+if (num2 == num1*num1)
 {
     Console.WriteLine("-> ДА");
 }
@@ -12,22 +9,39 @@ else
 {
     Console.WriteLine("-> НЕТ");
 }
+*/
+
 
 int daynumber;
 Console.WriteLine("Введите порядковый номер дня недели");
 daynumber = Convert.ToInt32 (Console.ReadLine());
-if (daynumber < 8)
-{
-    if(daynumber=1)
+
+    if(daynumber==1)
         {
-            Console.WriteLine("Понедельник"))
+            Console.WriteLine("Понедельник");
         }
-    if(daynumber=2)
+    if(daynumber==2)
         {
-            Console.WriteLine("Вторник")
+            Console.WriteLine("Вторник");
         }       
-}
-else
-{
-    Console.WriteLine("Дня недели с таким номером не существует, подумай еще!!!!!!!");
-}
+   if (daynumber==3)
+        {
+            Console.WriteLine("Среда");
+        }
+    if (daynumber==4)
+        {
+            Console.WriteLine("Четверг");
+        }    
+    if (daynumber==5)
+        {
+            Console.WriteLine("Ура, пятница!!!");           
+        }    
+    if (daynumber==6)
+        {
+            Console.WriteLine("Суббота");
+        }    
+    if(daynumber==7)
+        {
+            Console.WriteLine("Воскресенье");
+        }  
+else Console.WriteLine("Ни фига");
