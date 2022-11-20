@@ -101,6 +101,88 @@ void Zadacha22()
 
 }
 
+void Zadacha24() //Сумма цифр от 1 до введенного числа
+{
+    Random rand = new Random();
+    int number = rand.Next(1, 16);
+    Console.WriteLine("Введено число: " + number);
+
+    int counter = 1;
+    int sum = 0;
+    while (counter <= number)
+    {
+        sum = sum + counter;
+        Console.Write($"{counter}" + "{number}");
+        Console.WriteLine(sum);
+        counter++;
+    }
+}
+
+//Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр
+// в числе.
+
+void Zadacha26()
+{
+    Random rand = new Random();
+    int number = rand.Next(1, 9999999);
+    Console.WriteLine("Введено число: " + number);
+    int counter = 0;
+
+    while (number > 0)
+    {
+        number = number / 10;
+        counter++;
+    }
+    Console.WriteLine("Ответ  " + counter);
+
+}
+
+void Zadacha28()
+{
+    Random rand = new Random();
+    int number = rand.Next(1, 16);
+    Console.WriteLine("Введено число: " + number);
+
+    int counter = 1;
+    int sum = 1;
+    while (counter <= number)
+    {
+
+        Console.Write($"{counter} * {sum} = ");
+        sum = sum * counter;
+        Console.WriteLine(sum);
+        counter++;
+    }
+}
+/*
+//Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями
+// и единицами в случайном порядке.
+void Zadacha30()
+{
+
+    int size = 8;
+    Random.rand = new Random();
+    int[] numbers = new int[size];
+    
+    for (int i = 0; i < size; i++);
+        numbers[i] = Random.Next(0,2);
+        Console.WriteLine(numbers[i]);
+}
+
+*/
+
+
+
+
+
+
+
+
+
+Zadacha30();
+//Zadacha28();
+//Zadacha26();
+//Zadacha24();
 //Zadacha18();
 //Zadacha22();
 //Zadacha17();

@@ -1,4 +1,63 @@
-﻿//Задача 19 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+﻿//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на 
+//выходе показывает вторую цифру этого числа.
+void Zadacha10()
+{
+    Console.WriteLine("Введите 3-х значное число");
+    int number = Convert.ToInt32(Console.ReadLine());
+    if (number > 99 && number < 1000)
+    {
+        number = number / 10;
+        int res = number % 10;
+        Console.WriteLine($"Вторая цифра числа = " + res);
+    }
+    else Console.WriteLine("Ха ха, попробуйте еще раз!");
+
+}
+
+//Задача 13: Напишите программу, которая с помощью деления выводит третью цифру заданного числа
+// или сообщает, что третьей цифры нет.
+//645 -> 5
+//78 -> третьей цифры нет
+//32679 -> 6
+void Zadacha13()
+{
+    Random rand = new Random();
+    int number = rand.Next(0, 100000);
+    Console.WriteLine("Введено число  " + number);
+    while (number > 1000)
+    {
+        number = number / 10;
+    }
+    int res = number % 10;
+
+    Console.WriteLine("Третья цифра в цисле  " + res);
+}
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, 
+//и проверяет, является ли этот день выходным.
+//6 -> да
+//7 -> да
+//1 -> нет
+void Zadacha15()
+{
+Console.WriteLine("Введите номер дня недели ");
+int daynum = Convert.ToInt32(Console.ReadLine());
+if (daynum > 0 && daynum < 8)
+{
+    if (daynum > 1 && daynum < 6)
+    {
+        Console.WriteLine("Будний день ");    
+    }
+    else Console.WriteLine("Выходной день ");
+}
+else Console.WriteLine("Ввод не корреткный! ");
+}
+
+
+
+
+
+//Задача 19 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
 void Zadacha19()
 {
@@ -59,7 +118,61 @@ void Zadacha23()
     }
 }
 
+//Задача 1. Рассчитать значение y при заданном x по формуле
 
+void DopZadacha1()
+{
+    Console.WriteLine("Введите значение х");
+    double x = Convert.ToDouble(Console.ReadLine());
+    double y = 0;
+    if (x > 0)
+    {
+        y = Math.Pow(Math.Sin(x), 2);
+        // Console.WriteLine("Ответ = " + y);
+    }
+    else
+        y = (1 - 2 * Math.Sin(Math.Pow(x, 2)));
+    Console.WriteLine("Ответ = " + y);
+}
+
+void DopZadacha2()
+//Задача 2. Дано трёхзначное число N. Определить кратна ли трём сумма всех его цифр.
+{
+    Random rand = new Random();
+    int number = rand.Next(100, 1000);
+    Console.WriteLine("Введено число: " + number);
+
+    int sum = 0;
+    while (number > 0)
+    {
+        sum = sum + number % 10;
+        number = number / 10;
+    }
+    if (sum % 3 == 0)
+    {
+        Console.WriteLine("Сумма всех цифр кратна 3-м, т.е. и все число делится на 3 без остатка!");
+    }
+    else Console.WriteLine($"Сумма всех цифр = {sum} не кратна 3-м! ");
+}
+
+//Задача 3. Дано трёхзначное число N. Определить, есть ли среди его цифр 4 или 7.
+
+// void DopZadacha3()
+// {
+
+
+
+// }
+
+
+
+
+
+Zadacha15();
+Zadacha13();
+Zadacha10();
 //Zadacha23();
 //Zadacha21();
 //Zadacha19();
+//DopZadacha1();
+//DopZadacha2();
