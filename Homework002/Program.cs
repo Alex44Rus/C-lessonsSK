@@ -168,9 +168,9 @@ void DopZadacha2()
 
 
 
-Zadacha15();
-Zadacha13();
-Zadacha10();
+//Zadacha15();
+//Zadacha13();
+//Zadacha10();
 //Zadacha23();
 //Zadacha21();
 //Zadacha19();
