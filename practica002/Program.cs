@@ -154,25 +154,38 @@ void Zadacha28()
         counter++;
     }
 }
-/*
+
+
+void FillArray(int[] nums)
+{
+    Random rand = new Random();
+    int size = nums.Length;
+    for (int i = 0; i < size; i++)
+    {
+        nums[i] = rand.Next(0, 2);
+    }
+}
+void PrintArray(int[] nums)
+{   
+    int size = nums.Length;
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write(nums[i] + "  ");
+    }
+    
+}    
 //Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями
 // и единицами в случайном порядке.
 void Zadacha30()
 {
-
     int size = 8;
-    Random.rand = new Random();
     int[] numbers = new int[size];
     
-    for (int i = 0; i < size; i++);
-        numbers[i] = Random.Next(0,2);
-        Console.WriteLine(numbers[i]);
+    FillArray(numbers);
+    PrintArray(numbers);
+    Console.WriteLine("  ");
+    
 }
-
-*/
-
-
-
 
 
 
