@@ -228,4 +228,4 @@ void Zadacha37()
 //Zadacha32();
 //Zadacha31();
 //Zadacha39();
-Zadacha37();
+//Zadacha37();
