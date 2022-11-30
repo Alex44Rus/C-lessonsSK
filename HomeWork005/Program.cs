@@ -123,6 +123,6 @@ void Zadacha38()
 
 
 
-Zadacha38();
+//Zadacha38();
 //Zadacha36();
 //Zadacha34();
