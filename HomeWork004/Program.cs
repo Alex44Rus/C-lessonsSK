@@ -101,5 +101,5 @@ void Zadacha29()
 
 
 //Zadacha29();
-Zadacha27();
+//Zadacha27();
 //Zadacha25();

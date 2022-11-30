@@ -40,17 +40,17 @@ void Zadacha13()
 //1 -> нет
 void Zadacha15()
 {
-Console.WriteLine("Введите номер дня недели ");
-int daynum = Convert.ToInt32(Console.ReadLine());
-if (daynum > 0 && daynum < 8)
-{
-    if (daynum > 1 && daynum < 6)
+    Console.WriteLine("Введите номер дня недели ");
+    int daynum = Convert.ToInt32(Console.ReadLine());
+    if (daynum > 0 && daynum < 8)
     {
-        Console.WriteLine("Будний день ");    
+        if (daynum > 1 && daynum < 6)
+        {
+            Console.WriteLine("Будний день ");
+        }
+        else Console.WriteLine("Выходной день ");
     }
-    else Console.WriteLine("Выходной день ");
-}
-else Console.WriteLine("Ввод не корреткный! ");
+    else Console.WriteLine("Ввод не корреткный! ");
 }
 
 
@@ -157,17 +157,61 @@ void DopZadacha2()
 
 //Задача 3. Дано трёхзначное число N. Определить, есть ли среди его цифр 4 или 7.
 
-// void DopZadacha3()
-// {
+void DopZadacha3()
+{
+    Random rand = new Random();
+    //int numberN = 548;
+    int numberN = rand.Next(100, 999);
+    int onenum;
+    int indikator = 0;
+    Console.WriteLine("Введено число  " + numberN);
+    while (numberN > 0)
+    {
+        onenum = numberN % 10;
+        numberN = numberN / 10;
+        if (onenum == 4 | onenum == 7)
+        {
+            indikator = 1;
+        }
+    }
+    if (indikator == 1)
+    {
+        Console.WriteLine("Среди цифр числа есть цифры 4 или 7 ");
+    }
+    else
+        Console.WriteLine("Число не содержит цифр 4 или 7");
+}
+
+//Задача 4. Дан массив длиной 10 элементов. Заполнить его последовательно числами от 1 до 10.
+void PrintArray(int[] tenNumbers)
+{
+    int size = tenNumbers.Length;
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write(tenNumbers[i] + "  ");
+    }
+}
+
+void DopZadacha4()
+{
+    int[] tenNumbers = new int[10];
+    for (int i = 0; i < 10; i++)
+    {
+        tenNumbers[i] = i + 1;
+    }
+    PrintArray(tenNumbers);
+}
 
 
 
-// }
 
 
 
 
 
+
+//DopZadacha4();
+//DopZadacha3();
 //Zadacha15();
 //Zadacha13();
 //Zadacha10();
