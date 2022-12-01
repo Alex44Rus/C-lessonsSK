@@ -71,7 +71,7 @@ void Zadacha36()
 //и минимальным элементов массива.
 //[3,21 7,04 22,93 -2,71 78,24] -> 80,95
 
-void FillArray2(double[] nums, int minValue, int maxValue)
+void FillArrayDouble(double[] nums, int minValue, int maxValue)
 {
     int length = nums.Length;
     Random rand = new Random();
@@ -81,7 +81,7 @@ void FillArray2(double[] nums, int minValue, int maxValue)
         nums[i] = Math.Round(nums[i], 2);
     }
 }
-void PrintArray2(double[] nums)
+void PrintArrayDouble(double[] nums)
 {
     int length = nums.Length;
     Console.WriteLine("Вывод массива");
@@ -101,8 +101,8 @@ void Zadacha38()
     double minElement = 10;
     double maxElement = -10;
     double otvet = 0;
-    FillArray2(massiveZ, -10, 10);
-    PrintArray2(massiveZ);
+    FillArrayDouble(massiveZ, -10, 10);
+    PrintArrayDouble(massiveZ);
     for (int i = 1; i < size; i++)
     {
         if (massiveZ[i] < minElement)
