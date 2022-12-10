@@ -71,4 +71,4 @@ void Zadacha43()
 
 
 //Zadacha41();
-Zadacha43();
+//Zadacha43();
