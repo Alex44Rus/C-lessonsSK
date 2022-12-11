@@ -2,7 +2,7 @@
 //округлёнными до одного знака.
 // m = 3, n = 4.
 
-void FillArrayDouble(double[,] numbers, double minValue = 0, double maxValue = 9)
+void FillArrayDouble(double[,] numbers, double minValue = 0, double maxValue = 1)
 {
     maxValue++;
     Random rand = new Random();
@@ -84,7 +84,10 @@ void Zadacha50()
     Console.WriteLine("Введите № столбца элемента ");
     int userColumn = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine();
-    if (userRow < rows && userColumn < columns)
+    if (userRow >= 0 &&
+        userColumn >= 0 &&
+        userRow < rows &&
+        userColumn < columns)
     {
         Console.WriteLine($" Выбранный элемент = {numbers5x5[userRow - 1, userColumn - 1]}");
     }
@@ -109,7 +112,7 @@ void Zadacha52()
     FillArray(numbers, 1, 9);
     PrintArray(numbers);
     double average = 0;
-    
+
     for (int j = 0; j < columns; j++)
     {
         double sum = 0;
@@ -123,6 +126,111 @@ void Zadacha52()
     }
 }
 
+/*Задача 54. Задайте двумерный массив. Напишите программу,
+ которая упорядочит по убыванию элементы каждой строки двумерного массива.*/
+
+
+void SortArray2DrowsDown(int[,] numbers)
+{
+    int rows = numbers.GetLength(0);
+    int columns = numbers.GetLength(1);
+    int temp = 0;
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            for (int k = 0; k < columns - j - 1; k++)
+            {
+                if (numbers[i, k] < numbers[i, k + 1])
+                {
+                    temp = numbers[i, k];
+                    numbers[i, k] = numbers[i, k + 1];
+                    numbers[i, k + 1] = temp;
+                }
+
+            }
+        }
+    }
+}
+void Zadacha54()
+{
+    int rows = 3;
+    int columns = 4;
+    int[,] numbers = new int[rows, columns];
+    FillArray(numbers, -9, 9);
+    PrintArray(numbers);
+    SortArray2DrowsDown(numbers);
+    Console.WriteLine();
+    PrintArray(numbers);
+
+}
+
+/*Задача 56. Задайте прямоугольный двумерный массив. Напишите программу, которая
+ будет находить строку с наименьшей суммой элементов.*/
+
+void Zadacha56()
+{
+    int rows = 6;
+    int columns = 10;
+    int[,] numbers = new int[rows, columns];
+    FillArray(numbers, 1, 9);
+    PrintArray(numbers);
+    int indexMin = 0;
+    int minSum = 9 * columns; //Максимальное значение элемента * на кол-во элементов
+
+    for (int i = 0; i < rows; i++)
+    {
+
+        {
+            int sum = 0;
+            for (int j = 0; j < columns; j++)
+            {
+                sum = sum + numbers[i, j];
+            }
+            if (sum < minSum)
+            {
+                minSum = sum;
+                indexMin = i;
+            }
+        }
+    }
+    Console.WriteLine($"Минимальная сумма в {indexMin + 1} строке = {minSum}");
+
+}
+
+void Zadacha58()
+{
+    int rows = 4;
+    int columns = 4;
+    int indexRow = 0;
+    int indexColumns = 0;
+    int biasRow = 0;
+    int biasColumn = 1;
+    int steps = columns;
+    int turn = 0;
+
+
+
+    int[,] numbers = new int[rows, columns];
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        numbers[indexRow, indexColumns] = i + 1;
+       // Console.WriteLine($"[{indexRow},{indexColumns} = {numbers[indexRow, indexColumns]}]");
+        steps--;
+        if (steps == 0)
+        {
+            steps = columns - 1 - turn / 2;
+            int temp = biasRow;     // сдвиг по колонке вниз
+            biasRow = biasColumn;
+            biasColumn = -temp;
+            turn++;
+        }
+        indexRow = indexRow + biasRow;
+        indexColumns = indexColumns + biasColumn;
+
+    }
+    PrintArray(numbers);
+}
 
 
 
@@ -134,9 +242,9 @@ void Zadacha52()
 
 
 
-
-
-
-Zadacha52();
+Zadacha58();
+//Zadacha56();
+//Zadacha54();
+//Zadacha52();
 //Zadacha47();
 //Zadacha50();
