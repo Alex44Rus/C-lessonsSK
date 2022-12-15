@@ -200,8 +200,8 @@ void Zadacha56()
 
 void Zadacha58()
 {
-    int rows = 4;
-    int columns = 4;
+    int rows = 5;
+    int columns = 6;
     int indexRow = 0;
     int indexColumns = 0;
     int biasRow = 0;
@@ -215,11 +215,10 @@ void Zadacha58()
     for (int i = 0; i < numbers.Length; i++)
     {
         numbers[indexRow, indexColumns] = i + 1;
-       // Console.WriteLine($"[{indexRow},{indexColumns} = {numbers[indexRow, indexColumns]}]");
         steps--;
         if (steps == 0)
         {
-            steps = columns - 1 - turn / 2;
+            steps = columns * (turn % 2) + rows * ((turn + 1) % 2) - 1 - turn / 2;
             int temp = biasRow;     // сдвиг по колонке вниз
             biasRow = biasColumn;
             biasColumn = -temp;
@@ -242,7 +241,7 @@ void Zadacha58()
 
 
 
-Zadacha58();
+//Zadacha58();
 //Zadacha56();
 //Zadacha54();
 //Zadacha52();
